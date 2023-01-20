@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>課題2</title>
+	<style>
+		form {
+			width: 870px;
+			border: solid 2px;
+			font-size: 15px;
+			padding: 10px;
+			margin: 0 auto;
+		}
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			border: solid 2px;
+			font-size: 15px;
+		}
+		td{
+			border: solid 2px;
+			padding: 5px 30px 5px 10px;
+		}
+		input,select,textarea{
+			margin-left: 2%;
+		}
+		tt{
+			text-align: center;
+		}
+		.submit{
+			width: 20%;
+			font-size: 17px;
+			margin: 10px 0 10px 45%;
+		}
+	</style>
+</head>
+<body>
+  <form action="kadai_crear.php" method="post">
+		<p>以下の追加してほしい商品のリストの項目を入力or選択してください。</p>
+
+		<table>
+			<tr>
+				<td class="var">
+					<tt>氏名</tt>
+				</td>
+				<td>
+					<input type="text" size="20" name="name">
+				</td>
+			</tr>
+
+			<tr>
+			<td class="var">
+				<tt>店舗</tt>
+			</td>
+			<td>
+				<select name="tenpo">
+					<option value="イオン">イオン</option>
+					<option value="HOME's">HOME's</option>
+					<option value="紀伊國屋">紀伊國屋</option>
+					<option value="サイゼリア">サイゼリア</option>
+					<option value="LIVIN">LIVIN</option>
+				</select>
+			</td>
+			</tr>
+
+			<tr>
+			<td class="var">
+				<tt>商品ジャンル</tt>
+			</td>
+				<td>
+				<input type="checkbox" size="6" name="jyanru[]" value="運動">運動
+				<input type="checkbox" size="6" name="jyanru[]" value="食べ物">食べ物
+				<input type="checkbox" size="6" name="jyanru[]" value="動画">動画
+				<input type="checkbox" size="6" name="jyanru[]" value="書籍">書籍
+				<input type="checkbox" size="6" name="jyanru[]" value="機器">機器
+			</td>
+			</tr>
+
+			<tr>
+				<td class="var">
+					<tt>欲しい商品を書いてください</tt>
+					</td>
+					<td>
+					<textarea name="opinions" rows="8" cols="80"></textarea>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="確認画面へ" class="submit">
+				</td>
+			</tr>
+
+		</table>
+  </form>
+</body>
+</html>
